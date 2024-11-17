@@ -521,7 +521,7 @@ strong {
 .hero-image-wrap {
   /*background: var(--white-color);*/
   /* background-image: url(/images/radif.png); */
-  background-image: url(/images/radif-Photoroom.png);
+  background-image: url(/images/radif-Photoroom.png) !important;
   /*box-shadow: 0 1rem 3rem rgba(248, 248, 248, 0.175);*/
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.541);
 
