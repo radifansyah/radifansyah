@@ -1344,13 +1344,26 @@ https://templatemo.com/tm-578-first-portfolio
             loop: true,
             speed: 170,
         })
-            .type('Hey, I’m <span style="color: red; text-decoration: underline">Muh Radifansyah R</span>', { delay: 1000 }) // Bagian "Muh Radifansyah R" berwarna kuning
-            .pause(1000) // Jeda 1 detik setelah mengetik teks
-            .delete() // Menghapus teks
-            .pause(1000) // Jeda 1 detik setelah menghapus teks
-            .type('But you can call me <span style="color: red; text-decoration: underline">Radif</span>', { delay: 1000 }) // Bagian "Radif" berwarna kuning
-            .pause(1000) // Jeda 1 detik setelah mengetik teks baru
-            .go();
+            // .type('Hey, I’m <span style="color: red; text-decoration: underline">Muh Radifansyah R</span>', { delay: 1000 }) // Bagian "Muh Radifansyah R" berwarna kuning
+            // .pause(1000) // Jeda 1 detik setelah mengetik teks
+            // .delete() // Menghapus teks
+            // .pause(1000) // Jeda 1 detik setelah menghapus teks
+            // .type('But you can call me <span style="color: red; text-decoration: underline">Radif</span>', { delay: 1000 }) // Bagian "Radif" berwarna kuning
+            // .pause(1000) // Jeda 1 detik setelah mengetik teks baru
+            // .go();
+            .type('Hey, I’m <span style="color: red; text-decoration: underline">Muh Radif</span>', { delay: 1000 }) // Mengetik "Hey, I’m Muh Radif"
+        .pause(100) // Jeda 1 detik setelah mengetik "Hey, I’m Muh Radif"
+        .type('<span style="color: blue; text-decoration: underline">snyah</span>') // Mengetik "fffff" dengan warna kuning untuk salah ketik
+        .pause(100) // Jeda 1 detik setelah mengetik "fffff"
+        .delete(5) // Menghapus 5 karakter "fffff"
+        .pause(1000) // Jeda 0.5 detik setelah menghapus
+        .type('<span style="color:red">ansyah R</span>') // Mengetik "ansyah R" setelah menghapus
+        .pause(100) // Jeda 1 detik setelah mengetik "ansyah R"
+        .delete() // Menghapus semua teks yang sudah ada
+        .pause(1000) // Jeda 1 detik setelah menghapus teks
+        .type('But you can call me <span style="color: red; text-decoration: underline">Radif</span>', { delay: 1000 }) // Mengetik "But you can call me Radif"
+        .pause(1000) // Jeda 1 detik setelah mengetik teks baru
+        .go(); // Mulai animasi pengetikan
     </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

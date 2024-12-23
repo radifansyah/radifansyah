@@ -545,7 +545,7 @@ strong {
   z-index: 2;  /* Pastikan ikon berada di atas gambar */
   animation: moveIcons 3s infinite;
 }
-
+/* 
 /* Posisi ikon di luar gambar (setiap sudut) */
 .top-left {
   top: -10px;  /* Menempatkan ikon sedikit di luar gambar */
@@ -584,7 +584,7 @@ strong {
   }
   100% {
       transform: translate(0, 0);
-  }
+  } */
 }
 
 
