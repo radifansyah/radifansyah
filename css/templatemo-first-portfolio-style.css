@@ -517,8 +517,6 @@ strong {
   z-index: 22;
   top: 70px;
 }
-
-/* Wrapper untuk hero image pertama */
 .hero-image-wrap-1 {
   position: relative;
   width: 310px;
@@ -529,62 +527,74 @@ strong {
   overflow: hidden;
 }
 
-/* Gambar hero */
-.hero-image-wrap .hero-image {
+.hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
 }
 
-/* Posisi ikon di luar gambar */
-.arrow-icon {
+.circle-icons {
   position: absolute;
-  font-size: 2rem;
-  color: #fff;
-  z-index: 2;  /* Pastikan ikon berada di atas gambar */
-  animation: moveIcons 3s infinite;
-}
-/* 
-/* Posisi ikon di luar gambar (setiap sudut) */
-.top-left {
-  top: -10px;  /* Menempatkan ikon sedikit di luar gambar */
-  left: -10px;
-  animation-delay: 0s;
-}
-.top-right {
-  top: -10px;
-  right: -10px;
-  animation-delay: 1s;
-}
-.bottom-left {
-  bottom: -10px;
-  left: -10px;
-  animation-delay: 2s;
-}
-.bottom-right {
-  bottom: -10px;
-  right: -10px;
-  animation-delay: 3s;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Animasi untuk ikon mengelilingi gambar */
-@keyframes moveIcons {
+/* Warna Ikon Biru dan Animasi */
+.icon {
+  position: absolute;
+  font-size: 30px;
+  color: #ffffff;
+  animation: moveRotate 2s infinite; /* Menambahkan animasi moveRotate */
+}
+
+/* Keyframes untuk pergerakan dan putaran ikon */
+@keyframes moveRotate {
   0% {
-      transform: translate(0, 0);
+    transform: translate(-50%, -50%) rotate(0deg); /* Posisi awal */
   }
   25% {
-      transform: translate(30px, 30px);
+    transform: translate(100px, -50%) rotate(90deg); /* Bergerak ke kanan dan berputar */
   }
   50% {
-      transform: translate(0, 30px);
+    transform: translate(100px, 100px) rotate(180deg); /* Bergerak ke bawah dan berputar */
   }
   75% {
-      transform: translate(-30px, 30px);
+    transform: translate(-50%, 100px) rotate(270deg); /* Bergerak ke kiri dan berputar */
   }
   100% {
-      transform: translate(0, 0);
-  } */
+    transform: translate(-50%, -50%) rotate(360deg); /* Kembali ke posisi semula dan berputar penuh */
+  }
+}
+
+/* Posisi Ikon */
+.icon:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon:nth-child(2) {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon:nth-child(4) {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 
