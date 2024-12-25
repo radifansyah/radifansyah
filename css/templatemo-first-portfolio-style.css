@@ -549,7 +549,7 @@ strong {
 .icon {
   position: absolute;
   font-size: 30px;
-  color: #ffffff;
+  color: #cffd00;
   animation: moveRotate 2s infinite; /* Menambahkan animasi moveRotate */
 }
 
