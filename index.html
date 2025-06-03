@@ -49,6 +49,22 @@
             animation: l3 1s infinite linear;
         }
 
+        .pagination .page-link {
+            border-radius: 50% !important;
+            margin: 0 3px;
+            width: 38px;
+            height: 38px;
+            text-align: center;
+            padding: 6px 0;
+            font-weight: bold;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
         @keyframes l3 {
             20% {
                 background-position: 0% 0%, 50% 50%, 100% 50%
@@ -69,112 +85,122 @@
 
 
         @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
+            0% {
+                transform: scale(1);
+            }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
+            50% {
+                transform: scale(1.1);
+            }
 
-.animate-click {
-    animation: pulse 1.5s infinite;
-    /* Gunakan bounce sebagai alternatif */
-    /* animation: bounce 2s infinite; */
-    transition: transform 0.2s ease-in-out;
-}
+            100% {
+                transform: scale(1);
+            }
+        }
 
-.animate-click:hover {
-    transform: scale(1.2); /* Efek zoom ketika hover */
-    animation: none; /* Matikan animasi saat hover */
-}
+        @keyframes bounce {
 
-/* Tombol Animasi */
-.animate-click {
-    animation: pulse 1.5s infinite;
-    transition: transform 0.2s ease-in-out;
-}
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
 
-.animate-click:hover {
-    transform: scale(1.2);
-    animation: none;
-}
+            40% {
+                transform: translateY(-10px);
+            }
 
-/* Modal Container */
-.custom-modal {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); */
-    color: #fff;
-    /* box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); */
-    z-index: 1000;
-    transition: right 0.4s ease-in-out;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
-/* Modal Content */
-.modal-content {
-    padding: 20px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    text-align: center;
-}
+        .animate-click {
+            animation: pulse 1.5s infinite;
+            /* Gunakan bounce sebagai alternatif */
+            /* animation: bounce 2s infinite; */
+            transition: transform 0.2s ease-in-out;
+        }
 
-.modal-title {
-    font-size: 24px;
-    font-weight: bold;
-}
+        .animate-click:hover {
+            transform: scale(1.2);
+            /* Efek zoom ketika hover */
+            animation: none;
+            /* Matikan animasi saat hover */
+        }
 
-/* Tombol Close */
-.close-modal {
-    background: none;
-    border: none;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
+        /* Tombol Animasi */
+        .animate-click {
+            animation: pulse 1.5s infinite;
+            transition: transform 0.2s ease-in-out;
+        }
 
-.close-modal:hover {
-    transform: scale(1.2);
-    color: #f0f0f0;
-}
+        .animate-click:hover {
+            transform: scale(1.2);
+            animation: none;
+        }
 
-/* Modal Active */
-.custom-modal.active {
-    right: 0;
-}
+        /* Modal Container */
+        .custom-modal {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100%;
+            /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); */
+            color: #fff;
+            /* box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); */
+            z-index: 1000;
+            transition: right 0.4s ease-in-out;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
 
+        /* Modal Content */
+        .modal-content {
+            padding: 20px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Tombol Close */
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.2);
+            color: #f0f0f0;
+        }
+
+        /* Modal Active */
+        .custom-modal.active {
+            right: 0;
+        }
     </style>
 
 
@@ -277,77 +303,82 @@ https://templatemo.com/tm-578-first-portfolio
                             </p>
                         </div>
                     </div> -->
-                    
+
 
                     <div class="col-lg-7 col-12">
                         <div class="hero-text">
                             <div class="hero-title-wrap d-flex align-items-center mb-5">
-                                <h1 class="text-center text-sm-center text-md-start text-lg-start" id="type2" style="color: white; font-size: 60px;"></h1>
+                                <h1 class="text-center text-sm-center text-md-start text-lg-start" id="type2"
+                                    style="color: white; font-size: 60px;"></h1>
                             </div>
-                            <p class="text-center text-sm-center text-md-start text-lg-start">Web Development, Networking, Design</p>
-                      <!-- Social Media Icons -->
-                                                 
-                      <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3 mb-3">
-                        <!-- <a href="https://facebook.com" target="_blank" class="text-white">
+                            <p class="text-center text-sm-center text-md-start text-lg-start">Web Development,
+                                Networking, Design, Administration</p>
+                            <!-- Social Media Icons -->
+
+                            <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3 mb-3">
+                                <!-- <a href="https://facebook.com" target="_blank" class="text-white">
                             <i class="fab fa-facebook fa-2x"></i>
                         </a> -->
-                        <a href="https://github.com/radifansyah" target="_blank" class="text-white">
-                            <i class="fab fa-github fa-2x"></i>
-                        </a>
-                        <a href="#" target="_blank" class="text-white">
-                            <i class="fab fa-instagram fa-2x"></i>
-                        </a>
-                        <a href="https://wa.me/6282259263823" target="_blank" class="text-white">
-                            <i class="fab fa-whatsapp fa-2x"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/muhradifansyah/" target="_blank" class="text-white">
-                            <i class="fab fa-linkedin fa-2x"></i>
-                        </a>
-                    </div>
+                                <a href="https://github.com/radifansyah" target="_blank" class="text-white">
+                                    <i class="fab fa-github fa-2x"></i>
+                                </a>
+                                <a href="#" target="_blank" class="text-white">
+                                    <i class="fab fa-instagram fa-2x"></i>
+                                </a>
+                                <a href="https://wa.me/6282259263823" target="_blank" class="text-white">
+                                    <i class="fab fa-whatsapp fa-2x"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/muhradifansyah/" target="_blank"
+                                    class="text-white">
+                                    <i class="fab fa-linkedin fa-2x"></i>
+                                </a>
+                            </div>
 
                             <p class="mb-4 text">
-                                <a class="custom-btn btn btn-danger animate-click" 
-                                   style="box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.541); font-size: 18px; padding: 10px 20px;"
-                                   id="openModal"
-                                   href="#"
-                                   data-aos="zoom-in"
-                                   data-aos-duration="3000">
-                                   Download CV
+                                <a class="custom-btn btn btn-danger animate-click"
+                                    style="box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.541); font-size: 18px; padding: 10px 20px;"
+                                    id="openModal" href="#" data-aos="zoom-in" data-aos-duration="3000">
+                                    Download CV
                                 </a>
                             </p>
-                    
+
                         </div>
                     </div>
-                    
 
-                    
-                  <!-- Modal -->
-<div id="rightModal" class="custom-modal">
-    <div class="modal-content">
-        <!-- Tombol Close -->
-        <button class="close-modal" id="closeModal" style="color: black;">  <i class="fas fa-times"></i></button>
-        <h2 class="modal-title">Thank You!</h2>
-        <p>Terima kasih telah mengunduh CV saya. Jangan ragu untuk menghubungi saya melalui email atau media sosial.</p>
-        <a href="cv/CV MUH. RADIFANSYAH R.docx" download="Cv Muh. Radifansyah R" class="btn btn-danger">
-            Unduh Sekarang
-        </a>
-    </div>
-</div>
 
-                    
-                    
+
+                    <!-- Modal -->
+                    <div id="rightModal" class="custom-modal">
+                        <div class="modal-content">
+                            <!-- Tombol Close -->
+                            <button class="close-modal" id="closeModal" style="color: black;"> <i
+                                    class="fas fa-times"></i></button>
+                            <h2 class="modal-title">Thank You!</h2>
+                            <p>Terima kasih telah mengunduh CV saya. Jangan ragu untuk menghubungi saya melalui email
+                                atau media sosial.</p>
+                            <a href="cv/CV MUH. RADIFANSYAH R.docx" download="Cv Muh. Radifansyah R"
+                                class="btn btn-danger">
+                                Unduh Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+
+
                     <div id="rightModal" class="custom-modal">
                         <div class="modal-content">
                             <!-- Tombol Close -->
                             <button class="close-modal" id="closeModal" aria-label="Close Modal">&times;</button>
                             <h2 class="modal-title">Thank You!</h2>
-                            <p>Terima kasih telah mengunduh CV saya. Jangan ragu untuk menghubungi saya melalui email atau media sosial.</p>
-                            <a href="cv/CV MUH. RADIFANSYAH R.docx" download="Cv Muh. Radifansyah R" class="btn btn-primary">
+                            <p>Terima kasih telah mengunduh CV saya. Jangan ragu untuk menghubungi saya melalui email
+                                atau media sosial.</p>
+                            <a href="cv/CV MUH. RADIFANSYAH R.docx" download="Cv Muh. Radifansyah R"
+                                class="btn btn-primary">
                                 Unduh Sekarang
                             </a>
                         </div>
                     </div>
-                    
+
 
                     <div class="col-lg-5 col-12 position-relative">
                         <div class="hero-image-wrap hero-image-wrap-1">
@@ -360,14 +391,14 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
                         </div>
 
-                        
+
                     </div>
-                                              
-                    
-                    
-                    
-                    
-                             
+
+
+
+
+
+
                 </div>
             </div>
 
@@ -501,7 +532,11 @@ https://templatemo.com/tm-578-first-portfolio
                                     <h6>Mid-Mts Pesantren Nurul Junaidiyah Lauwo
                                     </h6>
                                     <p class="text-muted" style="text-align: justify;">
-                                        Saya bersekolah di Pesantren Nurul Junaidiyah Lauwo yang terletak di jln. Trans Sulawesi Desa Lauwo. Saya menempuh pendidikan di pesantren ini dari tahun 2014 hingga 2017. Selama masa studi di Pesantren Nurul Junaidiyah Lauwo, saya mendapatkan pendidikan agama yang mendalam serta berbagai keterampilan dan pengetahuan yang sangat berharga untuk pengembangan pribadi dan spiritual saya.
+                                        Saya bersekolah di Pesantren Nurul Junaidiyah Lauwo yang terletak di jln. Trans
+                                        Sulawesi Desa Lauwo. Saya menempuh pendidikan di pesantren ini dari tahun 2014
+                                        hingga 2017. Selama masa studi di Pesantren Nurul Junaidiyah Lauwo, saya
+                                        mendapatkan pendidikan agama yang mendalam serta berbagai keterampilan dan
+                                        pengetahuan yang sangat berharga untuk pengembangan pribadi dan spiritual saya.
 
 
                                     </p>
@@ -526,7 +561,8 @@ https://templatemo.com/tm-578-first-portfolio
 
                                     <h6>SMKN 2 LUWU TIMUR Konsentrasi (Teknik Komputer dan Jaringan)
                                     </h6>
-                                    <p class="text-muted" style="text-align: justify;">Saya bersekolah di SMKN 2 Luwu Timur yang terletak di Jalan
+                                    <p class="text-muted" style="text-align: justify;">Saya bersekolah di SMKN 2 Luwu
+                                        Timur yang terletak di Jalan
                                         Raya Luwu Timur,
                                         Kecamatan Tomoni, Kabupaten Luwu Timur, Sulawesi Selatan, dengan kode pos 92992.
                                         Saya menempuh pendidikan di sekolah ini dari tahun 2017 hingga 2020. Selama masa
@@ -557,7 +593,8 @@ https://templatemo.com/tm-578-first-portfolio
 
                                         Konsentrasi Desain Web
                                     </h6>
-                                    <p class="text-muted" style="text-align: justify;">Saya melanjutkan pendidikan tinggi di Universitas Cokroaminoto
+                                    <p class="text-muted" style="text-align: justify;">Saya melanjutkan pendidikan
+                                        tinggi di Universitas Cokroaminoto
                                         Palopo yang terletak di Jalan Cokroaminoto, Palopo, Sulawesi Selatan, dengan
                                         kode pos 91912. Saya memulai studi saya di universitas ini pada tahun 2020-2024.
                                         Selama di Universitas Cokroaminoto Palopo, saya memperoleh berbagai ilmu dan
@@ -571,8 +608,7 @@ https://templatemo.com/tm-578-first-portfolio
                                 </div>
                             </div>
                             <div class="col-lg-6 col-12">
-                                <div class="services-thumb shadow" data-aos="fade-up"
-                                    data-aos-duration="3000">
+                                <div class="services-thumb shadow" data-aos="fade-up" data-aos-duration="3000">
                                     <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
                                         <!-- <h3 class="mb-0">SD-SMP</h3> -->
 
@@ -585,17 +621,23 @@ https://templatemo.com/tm-578-first-portfolio
                                     <h6>Pertukaran Mahasiswa Institut Teknologi Nasional Bandung
                                     </h6>
                                     <p class="text-muted" style="text-align: justify;">
-                                        Saya berkesempatan untuk mengikuti Program Pertukaran Mahasiswa Merdeka (PMM) di Institut Teknologi Nasional Bandung, yang merupakan salah satu program unggulan dari Kementerian Pendidikan dan Kebudayaan Republik Indonesia. Dalam program ini, saya memilih untuk melanjutkan studi selama satu semester di Program Studi Informatika. Kesempatan ini tidak hanya memberikan pengalaman belajar yang berharga di institusi yang terkenal dengan inovasi teknologi dan akademiknya, tetapi juga membuka wawasan saya tentang budaya dan pola pikir yang berbeda.
+                                        Saya berkesempatan untuk mengikuti Program Pertukaran Mahasiswa Merdeka (PMM) di
+                                        Institut Teknologi Nasional Bandung, yang merupakan salah satu program unggulan
+                                        dari Kementerian Pendidikan dan Kebudayaan Republik Indonesia. Dalam program
+                                        ini, saya memilih untuk melanjutkan studi selama satu semester di Program Studi
+                                        Informatika. Kesempatan ini tidak hanya memberikan pengalaman belajar yang
+                                        berharga di institusi yang terkenal dengan inovasi teknologi dan akademiknya,
+                                        tetapi juga membuka wawasan saya tentang budaya dan pola pikir yang berbeda.
                                     </p>
 
-                                    <a href="https://www.itenas.ac.id/" target="_blank"
-                                        class=" btn btn-danger    ">Show <i class="bi bi-arrow-right-short"></i></a>
+                                    <a href="https://www.itenas.ac.id/" target="_blank" class=" btn btn-danger    ">Show
+                                        <i class="bi bi-arrow-right-short"></i></a>
 
 
                                 </div>
                             </div>
-                           
-                           
+
+
 
                         </div>
                     </div>
@@ -621,7 +663,7 @@ https://templatemo.com/tm-578-first-portfolio
 
                     <div class="clearfix"></div>
 
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag">Aplikasi Website</small>
@@ -636,7 +678,24 @@ https://templatemo.com/tm-578-first-portfolio
                     </div>
 
 
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+
+                    
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
+                        <div class="projects-thumb">
+                            <div class="projects-info">
+                                <small class="projects-tag"> Server Linux</small>
+
+                                <h6 class="projects-title">Server Lokal</h6>
+                            </div>
+
+                            <a href="images/projects/linux.jpg" class="popup-image">
+                                <img src="images/projects/linux.jpg" class="projects-image img-fluid" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag">Aplikasi Website</small>
@@ -664,8 +723,38 @@ https://templatemo.com/tm-578-first-portfolio
                         </div>
                     </div> -->
 
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
+                        <div class="projects-thumb">
+                            <div class="projects-info">
+                                <small class="projects-tag">  Arduino</small>
 
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                                <h6 class="projects-title"> Arduino / Lampu Otomatis</h6>
+                            </div>
+
+                            <a href="images/projects/arduino.jpg" class="popup-image">
+                                <img src="images/projects/arduino.jpg" class="projects-image img-fluid" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
+                        <div class="projects-thumb">
+                            <div class="projects-info">
+                                <small class="projects-tag"> Prakitan</small>
+
+                                <h6 class="projects-title"> Prakitan Komputer</h6>
+                            </div>
+
+                            <a href="images/projects/pc.jpg" class="popup-image">
+                                <img src="images/projects/pc.jpg" class="projects-image img-fluid" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag">Aplikasi Website</small>
@@ -678,7 +767,7 @@ https://templatemo.com/tm-578-first-portfolio
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag"> Website Portofolio</small>
@@ -687,12 +776,11 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
 
                             <a href="images/projects/a.png" class="popup-image">
-                                <img src="images/projects/a.png"
-                                    class="projects-image img-fluid" alt="">
+                                <img src="images/projects/a.png" class="projects-image img-fluid" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag">Aplikasi Website</small>
@@ -705,7 +793,7 @@ https://templatemo.com/tm-578-first-portfolio
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag"> Website</small>
@@ -714,14 +802,29 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
 
                             <a href="images/projects/25.png" class="popup-image">
-                                <img src="images/projects/25.png"
-                                    class="projects-image img-fluid" alt="">
+                                <img src="images/projects/25.png" class="projects-image img-fluid" alt="">
                             </a>
                         </div>
                     </div>
 
 
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                       <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
+                        <div class="projects-thumb">
+                            <div class="projects-info">
+                                <small class="projects-tag"> Desain</small>
+
+                                <h6 class="projects-title">Desain Sketchup</h6>
+                            </div>
+
+                            <a href="images/projects/desain.jpg" class="popup-image">
+                                <img src="images/projects/desain.jpg" class="projects-image img-fluid" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag"> Website</small>
@@ -730,14 +833,13 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
 
                             <a href="images/projects/aaa.png" class="popup-image">
-                                <img src="images/projects/aaa.png"
-                                    class="projects-image img-fluid" alt="">
+                                <img src="images/projects/aaa.png" class="projects-image img-fluid" alt="">
                             </a>
                         </div>
                     </div>
 
 
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag"> Website</small>
@@ -746,14 +848,13 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
 
                             <a href="images/projects/bealutim.png" class="popup-image">
-                                <img src="images/projects/bealutim.png"
-                                    class="projects-image img-fluid" alt="">
+                                <img src="images/projects/bealutim.png" class="projects-image img-fluid" alt="">
                             </a>
                         </div>
                     </div>
 
 
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag"> Website</small>
@@ -762,16 +863,15 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
 
                             <a href="images/projects/landingpage.png" class="popup-image">
-                                <img src="images/projects/landingpage.png"
-                                    class="projects-image img-fluid" alt="">
+                                <img src="images/projects/landingpage.png" class="projects-image img-fluid" alt="">
                             </a>
                         </div>
                     </div>
 
 
 
-                    
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag"> Hosting</small>
@@ -780,14 +880,13 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
 
                             <a href="images/projects/hosting.png" class="popup-image">
-                                <img src="images/projects/hosting.png"
-                                    class="projects-image img-fluid" alt="">
+                                <img src="images/projects/hosting.png" class="projects-image img-fluid" alt="">
                             </a>
                         </div>
                     </div>
 
 
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag"> Aplikasi Mobile</small>
@@ -796,14 +895,13 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
 
                             <a href="images/projects/mobile.png" class="popup-image">
-                                <img src="images/projects/mobile.png"
-                                    class="projects-image img-fluid" alt="">
+                                <img src="images/projects/mobile.png" class="projects-image img-fluid" alt="">
                             </a>
                         </div>
                     </div>
 
 
-                    <div class="col-lg-4 col-md-6 col-12 shadow-lg">
+                    <div class="col-lg-4 col-md-6 col-12 shadow-lg project-item">
                         <div class="projects-thumb">
                             <div class="projects-info">
                                 <small class="projects-tag"> Aplikasi Web</small>
@@ -812,8 +910,7 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
 
                             <a href="images/projects/gbt.png" class="popup-image">
-                                <img src="images/projects/gbt.png"
-                                    class="projects-image img-fluid" alt="">
+                                <img src="images/projects/gbt.png" class="projects-image img-fluid" alt="">
                             </a>
                         </div>
                     </div>
@@ -821,8 +918,61 @@ https://templatemo.com/tm-578-first-portfolio
 
 
                 </div>
+                <!-- Pagination -->
+                <div class="col-12 d-flex justify-content-center mt-4">
+                    <nav>
+                        <ul class="pagination" id="project-pagination"> </ul>
+                    </nav>
+                </div>
             </div>
         </section>
+        <!-- JavaScript Pagination -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const itemsPerPage = 6;
+                const items = document.querySelectorAll('.project-item');
+                const pagination = document.getElementById('project-pagination');
+                let currentPage = 1;
+
+                function showPage(page) {
+                    const start = (page - 1) * itemsPerPage;
+                    const end = start + itemsPerPage;
+
+                    items.forEach((item, index) => {
+                        item.style.display = (index >= start && index < end) ? 'block' : 'none';
+                    });
+
+                    renderPagination();
+                }
+
+                function renderPagination() {
+                    const pageCount = Math.ceil(items.length / itemsPerPage);
+                    pagination.innerHTML = '';
+
+                    for (let i = 1; i <= pageCount; i++) {
+                        const li = document.createElement('li');
+                        li.classList.add('page-item');
+                        if (i === currentPage) li.classList.add('active');
+
+                        const a = document.createElement('a');
+                        a.classList.add('page-link');
+                        a.href = "#";
+                        a.innerText = i;
+
+                        a.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            currentPage = i;
+                            showPage(currentPage);
+                        });
+
+                        li.appendChild(a);
+                        pagination.appendChild(li);
+                    }
+                }
+
+                showPage(currentPage);
+            });
+        </script>
         <section class="projects section-padding border-top border" id="section_5">
             <div class="container">
                 <div class="row">
@@ -1001,8 +1151,10 @@ https://templatemo.com/tm-578-first-portfolio
 
                             </div>
 
-                            <a href="images/sertifikat/aaSertifikat_MUH. RADIFANSYAH R_Video Content Creator Mastery conv 1.png" class="popup-image">
-                                <img src="images/sertifikat/aaSertifikat_MUH. RADIFANSYAH R_Video Content Creator Mastery conv 1.png" class=" img-fluid" alt="">
+                            <a href="images/sertifikat/aaSertifikat_MUH. RADIFANSYAH R_Video Content Creator Mastery conv 1.png"
+                                class="popup-image">
+                                <img src="images/sertifikat/aaSertifikat_MUH. RADIFANSYAH R_Video Content Creator Mastery conv 1.png"
+                                    class=" img-fluid" alt="">
                             </a>
                         </div>
                     </div>
@@ -1463,18 +1615,18 @@ https://templatemo.com/tm-578-first-portfolio
             // .pause(1000) // Jeda 1 detik setelah mengetik teks baru
             // .go();
             .type('Hey, I’m <span style="color: red; text-decoration: underline">Muh Radif</span>', { delay: 1000 }) // Mengetik "Hey, I’m Muh Radif"
-        .pause(100) // Jeda 1 detik setelah mengetik "Hey, I’m Muh Radif"
-        .type('<span style="color: blue; text-decoration: underline">snyah</span>') // Mengetik "fffff" dengan warna kuning untuk salah ketik
-        .pause(100) // Jeda 1 detik setelah mengetik "fffff"
-        .delete(5) // Menghapus 5 karakter "fffff"
-        .pause(1000) // Jeda 0.5 detik setelah menghapus
-        .type('<span style="color:red">ansyah R</span>') // Mengetik "ansyah R" setelah menghapus
-        .pause(100) // Jeda 1 detik setelah mengetik "ansyah R"
-        .delete() // Menghapus semua teks yang sudah ada
-        .pause(1000) // Jeda 1 detik setelah menghapus teks
-        .type('But you can call me <span style="color: red; text-decoration: underline">Radif</span>', { delay: 1000 }) // Mengetik "But you can call me Radif"
-        .pause(1000) // Jeda 1 detik setelah mengetik teks baru
-        .go(); // Mulai animasi pengetikan
+            .pause(100) // Jeda 1 detik setelah mengetik "Hey, I’m Muh Radif"
+            .type('<span style="color: blue; text-decoration: underline">snyah</span>') // Mengetik "fffff" dengan warna kuning untuk salah ketik
+            .pause(100) // Jeda 1 detik setelah mengetik "fffff"
+            .delete(5) // Menghapus 5 karakter "fffff"
+            .pause(1000) // Jeda 0.5 detik setelah menghapus
+            .type('<span style="color:red">ansyah R</span>') // Mengetik "ansyah R" setelah menghapus
+            .pause(100) // Jeda 1 detik setelah mengetik "ansyah R"
+            .delete() // Menghapus semua teks yang sudah ada
+            .pause(1000) // Jeda 1 detik setelah menghapus teks
+            .type('But you can call me <span style="color: red; text-decoration: underline">Radif</span>', { delay: 1000 }) // Mengetik "But you can call me Radif"
+            .pause(1000) // Jeda 1 detik setelah mengetik teks baru
+            .go(); // Mulai animasi pengetikan
     </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -1488,36 +1640,36 @@ https://templatemo.com/tm-578-first-portfolio
     </script>
 
 
-<script>
- document.addEventListener('DOMContentLoaded', () => {
-    const openModal = document.getElementById('openModal');
-    const closeModal = document.getElementById('closeModal');
-    const modal = document.getElementById('rightModal');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openModal = document.getElementById('openModal');
+            const closeModal = document.getElementById('closeModal');
+            const modal = document.getElementById('rightModal');
 
-    // Buka modal saat tombol diklik
-    openModal.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('active');
-    });
+            // Buka modal saat tombol diklik
+            openModal.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+            });
 
-    // Tutup modal saat tombol close diklik
-    closeModal.addEventListener('click', () => {
-        modal.classList.remove('active');
-    });
+            // Tutup modal saat tombol close diklik
+            closeModal.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
 
-    // Tutup modal saat klik di luar area modal
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-        }
-    });
-});
+            // Tutup modal saat klik di luar area modal
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
 
 
-</script>
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="zumyXWgdnuNT2TtqofO66";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
+    </script>
+    <script>
+        (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "zumyXWgdnuNT2TtqofO66"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+    </script>
 </body>
 
 </html>
